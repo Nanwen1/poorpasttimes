@@ -31,13 +31,3 @@ class EventView(generic.DetailView):
 def account(request):
     return render(request, 'eventFinderApp/account.html')
 
-#long hand method for form example
-# def formPage(request):
-#     form = EventForm()
-#     if request.POST:
-#         # if handling a submitted form
-#         my_event = form(request)
-#         if my_event.valid():
-#             my_event.save()
-#         form = EventForm(intance=my_event)
-#     return render(request, 'eventFinderApp/newEventForm.html', {'form': form})

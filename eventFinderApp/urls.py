@@ -1,5 +1,5 @@
 from django.urls import path
-
+from django.urls import include, path
 from . import views
 
 
@@ -14,5 +14,4 @@ urlpatterns = [
     path('newEventForm/', views.NewEventView.as_view(), name= 'NewEventForm'),
     # event-finder/form
     path('my-account/', views.account, name='account'),
-
 ]
