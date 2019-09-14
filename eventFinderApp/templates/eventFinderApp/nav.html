@@ -1,7 +1,7 @@
 {% if user.is_authenticated %}
    <p>Hi {{ user.username }}</p>
-   <p><a href="{% url 'eventFinderApp:logout' %}">logout</a></p>
+   <p><a href="{% url 'users:logout' %}">logout</a></p>
 {% else %}
-   <p><a href="{% url 'eventFinderApp:login' %}">login</a></p>
+   <p><a href="{% url 'users:login' %}">login</a></p>
 {% endif %}
 </nav>
