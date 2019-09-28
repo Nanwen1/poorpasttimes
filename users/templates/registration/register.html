@@ -1,8 +1,25 @@
 {% extends "eventFinderApp/base.html" %}
-
-
 {% block content %}
 
-This is my register html
+{% if form.errors %}
+    {% for error, message in form.errors.items %}
+        <p>{{error}}</p>
+        <p>{{message}}</p>
+    {% endfor %}
+{% endif %}
+{% if next %}
+   {% if user.is_authenticated %}
+   <p>Your account doesn't have access to this page. To proceed,
+   please login with an account that has access.</p>
+   {% else %}
+   <p>Please login to see this page.</p>
+   {% endif %}
+{% endif %}
 
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p>lol</p>
+    <button type="submit" value="Update" class="btn btn-primary">Login</button>
+</form>
 {% endblock %}

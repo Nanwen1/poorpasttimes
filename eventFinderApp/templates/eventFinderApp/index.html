@@ -1,19 +1,23 @@
 {% extends "./base.html" %}
+{% load static %}
+
 
 {% block content %}
 
     <a href="./newEventForm">
         <button id="new-event"> 
-            Create new event
+            Add a Skip for Dippin'
         </button>
     </a>
-    <h3>See what's on!</h3>
+    <h3>Check out some skips!</h3>
     {% if events_list %}
         {% for event in events_list %}
             {% include "./detailsBox.html" with event=event %}
         {% endfor %}
     {% else %}
-        <p>No events are available.</p>
+        <p>No Dips are available.</p>
     {% endif %}
+
+    <img src="{% static 'eventFinderApp/chicken.png' %}"></img>
 
 {% endblock %}

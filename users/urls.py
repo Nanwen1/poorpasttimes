@@ -1,6 +1,7 @@
 from django.urls import path
 from django.urls import include, path
 from . import views
+from users import viewsets as UserViewsets
 
 app_name = 'users'
 
